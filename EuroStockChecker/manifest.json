@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Euro Stock Finder Pro",
+  "version": "2.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://www.euro.com.pl/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

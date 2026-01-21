@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 420px; height: 550px; margin: 0; font-family: Arial, sans-serif; display: flex; flex-direction: column; background: #f4f4f4; overflow: hidden; }
+    .header { padding: 15px; background: white; border-bottom: 2px solid #ddd; z-index: 100; }
+    .button-group { display: flex; gap: 8px; margin-top: 10px; }
+    
+    button { flex: 1; padding: 10px; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; transition: opacity 0.2s; }
+    #scan-btn { background: #0056b3; color: white; }
+    #stop-btn { background: #dc3545; color: white; }
+    #copy-btn { background: #6c757d; color: white; display: none; }
+    
+    button:disabled { background: #ccc !important; cursor: not-allowed; color: #666; }
+    
+    .maps-link { 
+        display: inline-block; 
+        margin-top: 8px; 
+        color: #0056b3; 
+        text-decoration: underline; 
+        font-size: 11px; 
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    #results { flex: 1; padding: 15px; overflow-y: auto; }
+    .city-header { background: #e9e9e9; padding: 6px 10px; font-weight: bold; margin-top: 10px; border-left: 4px solid #0056b3; font-size: 13px; }
+    .shop-entry { background: white; padding: 12px; border-bottom: 1px solid #eee; user-select: text; }
+    .avail-status { color: #28a745; font-weight: bold; font-size: 11px; }
+    .summary-box { background: #e7f3ff; padding: 10px; border-radius: 4px; font-size: 12px; border: 1px solid #b3d7ff; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div id="status-msg">Detecting product...</div>
+    <div class="button-group">
+      <button id="scan-btn" disabled>SCAN</button>
+      <button id="stop-btn" disabled>STOP</button>
+      <button id="copy-btn">COPY ALL</button>
+    </div>
+  </div>
+  <div id="results"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
